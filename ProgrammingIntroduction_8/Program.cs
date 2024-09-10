@@ -8,6 +8,7 @@ Console.WriteLine("Hello World!");
 // Console.ReadKey();
 // Debug.WriteLine("Hello World!");
 
+// Comment added in class by Long
 // variables and native operations
 int x;
 int y;
