@@ -33,13 +33,21 @@ try
 {
     int inputNumberChecked = Convert.ToInt32(userInputToCheck);
 }
-catch (Exception e)
+catch (DivideByZeroException e)
 {
     Console.WriteLine(e.Message);
 }
+catch (FormatException e)
+{
+    Console.WriteLine(e.Message);
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message + e.StackTrace);
+}
 
 // example 1 - simple computation
-// M disambiguates between double and decimal
+// M disambiguates between double and decimal; decimal is for financial use
 decimal income = 10000000.45M;
 decimal taxRate = 0.1M;
 decimal taxLiability = income * taxRate;
